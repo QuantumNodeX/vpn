@@ -950,7 +950,7 @@
     <div class="page-shell">
         <header class="site-header fade-in">
             <a class="brand" href="#top" aria-label="量子VPN homepage">
-                <span class="brand-mark">LZ</span>
+                <span class="brand-mark">QN</span>
                 <span class="brand-text">
                     <strong>量子VPN</strong>
                     <span id="brand-subtitle">全球安全网络</span>
@@ -1137,7 +1137,7 @@
                         <h3 id="card-windows-title">Windows</h3>
                         <p id="card-windows-copy">Windows 原生桌面客户端，安装流程熟悉，上手更快，连接稳定。</p>
                         <div class="download-meta">
-                            <span class="meta-pill">Version 3.0.0</span>
+                            <span class="meta-pill" id="card-windows-version">Version</span>
                             <span class="meta-pill">.exe</span>
                         </div>
                         <div class="download-actions">
@@ -1152,7 +1152,7 @@
                         <h3 id="card-macos-title">macOS</h3>
                         <p id="card-macos-copy">轻量级 macOS 安装包，适合快速接入，也适合在工作和出行场景间顺畅切换。</p>
                         <div class="download-meta">
-                            <span class="meta-pill">Version 2.3.0</span>
+                            <span class="meta-pill" id="card-macos-version">Version</span>
                             <span class="meta-pill">.pkg</span>
                         </div>
                         <div class="download-actions">
@@ -1167,7 +1167,7 @@
                         <h3 id="card-android-title">Android</h3>
                         <p id="card-android-copy">面向 Android 用户提供直接 APK 下载，移动端安装路径更简单，接入更迅速。</p>
                         <div class="download-meta">
-                            <span class="meta-pill">Version 4.0.0</span>
+                            <span class="meta-pill" id="card-android-version">Version</span>
                             <span class="meta-pill">APK</span>
                         </div>
                         <div class="download-actions">
@@ -1322,15 +1322,15 @@
                     }
                 },
                 en: {
-                    pageTitle: "量子VPN | Secure. Fast. Simple.",
-                    pageDescription: "量子VPN delivers private, fast, and simple access across Windows, macOS, Android, and iOS web.",
+                    pageTitle: "Quantum VPN | Secure. Fast. Simple.",
+                    pageDescription: "Quantum VPN delivers private, fast, and simple access across Windows, macOS, Android, and iOS web.",
                     brandSubtitle: "Global Secure Network",
                     navFeatures: "Security",
                     navExperience: "Experience",
                     navDownloads: "Downloads",
                     heroEyebrow: "Secure. Fast. Simple.",
                     heroTitle: "Private access for a <span>borderless</span> internet.",
-                    heroDescription: "量子VPN is built for global users who want security without friction. Connect in one tap, switch across devices instantly, and keep your browsing experience fast, clean, and private.",
+                    heroDescription: "Quantum VPN is built for global users who want security without friction. Connect in one tap, switch across devices instantly, and keep your browsing experience fast, clean, and private.",
                     heroSecondary: "View All Downloads",
                     metric1Title: "1-Tap",
                     metric1Copy: "Fast onboarding from first open to first connection.",
@@ -1424,10 +1424,21 @@
             };
 
             var platformTargets = {
-                windows: "./file/shendeng-V3.0.0-24.exe",
-                macos: "./file/shendeng-v2.3.0-71.pkg",
-                android: "./file/shendeng-v4.0.0-31.apk",
-                "ios-web": "./web/index.html?channel=GitHub"
+                windows: {
+                    url: "./file/shendeng-V3.0.0-24.exe",
+                    version: "3.0.0"
+                },
+                macos: {
+                    url: "./file/shendeng-v2.3.0-71.pkg",
+                    version: "2.3.0"
+                },
+                android: {
+                    url: "./file/shendeng-v4.0.0-31.apk",
+                    version: "4.0.0"
+                },
+                "ios-web": {
+                    url: "./web/index.html"
+                }
             };
 
             var platformMap = {
@@ -1536,7 +1547,13 @@
             }
 
             function getPlatformTarget(platform) {
-                return platformTargets[platform] || "#downloads";
+                var target = platformTargets[platform];
+                return target && target.url ? target.url : "#downloads";
+            }
+
+            function getPlatformVersion(platform) {
+                var target = platformTargets[platform];
+                return target && target.version ? target.version : "";
             }
 
             function isDirectDownloadPlatform(platform) {
@@ -1570,6 +1587,12 @@
                 applyPlatformLink(document.getElementById("card-macos-download"), "macos");
                 applyPlatformLink(document.getElementById("card-android-download"), "android");
                 applyPlatformLink(document.getElementById("card-ios-download"), "ios-web");
+            }
+
+            function syncPlatformVersions() {
+                setText("card-windows-version", "Version " + getPlatformVersion("windows"));
+                setText("card-macos-version", "Version " + getPlatformVersion("macos"));
+                setText("card-android-version", "Version " + getPlatformVersion("android"));
             }
 
             function applyRecommendation() {
@@ -1730,6 +1753,7 @@
             }
 
             syncPlatformLinks();
+            syncPlatformVersions();
             applyLanguage(activeLang);
         }());
     </script>
