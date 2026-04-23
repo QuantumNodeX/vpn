@@ -1,0 +1,295 @@
+.layuimini-main-feedback > div.title{position: relative;height: 50px;text-align: center;color: #393D41;line-height: 50px;background-color: white;}
+.layuimini-main-feedback > div.title .page-title{display: inline-block;
+    line-height: 50px;
+    color: var(--sd-text, #f7f2e8);
+    font-size: 16px;
+    font-weight: 700;}
+.layuimini-main-feedback > div.title .reply{position: absolute;top: 0;right: 15px;color: #2468F2;cursor: pointer;}
+.layuimini-main-feedback > div.title .page-back{position: absolute;top: 8px;left: 8px;display: flex;align-items: center;justify-content: center;width: 34px;height: 34px;border: 1px solid rgba(123,47,242,0.14);border-radius: 999px;background: rgba(255,255,255,0.92);text-align: left;cursor: pointer;}
+.layuimini-main-feedback > div.title .page-back .back-icon{display: block;width: 10px;height: 10px;margin-left: 3px;border-left: 2px solid #7B2FF2;border-bottom: 2px solid #7B2FF2;transform: rotate(45deg);}
+.layuimini-main-feedback .body{width: 334px;margin: 21px auto;}
+.layuimini-main-feedback .body .feedback-type .title{line-height: 19px;font-weight: bold;color: #393D41;}
+.layuimini-main-feedback .body .feedback-type ul{margin-top: 11px;display: flex;}
+.layuimini-main-feedback .body .feedback-type ul li{display: inline-table;text-align: center;margin: 0 15px 18px 0;width: 101px;height: 36px;background-color: #BEBEBE;line-height: 36px;color: #FFFFFF;cursor: pointer;}
+.layuimini-main-feedback .body .feedback-type ul li:nth-child(3n){margin-right: 0;}
+.layuimini-main-feedback .body .feedback-type ul li.selected{background-color: #2468F2;}
+.layuimini-main-feedback .body .content .title{margin-bottom: 7px;line-height: 19px;color: #393D41;font-weight: bold;}
+.layuimini-main-feedback .body .content .content2{position: relative;}
+.layuimini-main-feedback .body .content .content2 textarea{height: 175px;}
+.layuimini-main-feedback .body .content .content2 .num{font-size: 15px;color: #B7B7B7;line-height: 19px;position: absolute;right: 12px;bottom: 7px;}
+.layuimini-main-feedback .body .picture{position: relative;width: 68px;height: 65px;background-color: white;margin-top: 11px;text-align: center;}
+.layuimini-main-feedback .body .picture img{width: 20px;}
+.layuimini-main-feedback .body .picture .txt{margin-top: 5px;font-size: 9px;color: #B7B7B7;}
+.layuimini-main-feedback .body .picture div.cancel-picture{position: absolute;top: 0;right: 0;margin-top: 0;width: 10px;height: 10px;line-height: 10px;cursor: pointer;}
+.layuimini-main-feedback .body .post{margin: 21px auto 33px auto;width: 320px;height: 45px;background-color: #2468F2;text-align: center;line-height: 45px;color: white;font-size: 15px;cursor: pointer;}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */color: #B7B7B7;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */color: #B7B7B7;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #B7B7B7;}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color: #B7B7B7;}
+.layuimini-main-feedback-list{
+    padding: 0 16px 28px;
+}
+.layuimini-main-feedback-list > div.title{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: 54px;
+    text-align: center;
+    color: #393D41;
+    line-height: 54px;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+}
+.layuimini-main-feedback-list > div.title .page-title{
+    display: inline-block;
+    color: #6D6289;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.layuimini-main-feedback-list > div.title .page-back{
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(123,47,242,0.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.94);
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(123,47,242,0.08);
+}
+.layuimini-main-feedback-list > div.title .page-back .back-icon{
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: 3px;
+    border-left: 2px solid #7B2FF2;
+    border-bottom: 2px solid #7B2FF2;
+    transform: rotate(45deg);
+}
+.layuimini-main-feedback-list .record-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 6px 0 8px;
+}
+.layuimini-main-feedback-list .record-card{
+    position: relative;
+    padding: 24px 18px 18px 18px;
+    border: 1px solid rgba(123,47,242,0.14);
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(251,248,255,0.96) 100%);
+    box-shadow: 0 18px 42px rgba(123,47,242,0.08);
+    overflow: hidden;
+}
+.layuimini-main-feedback-list .record-card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    bottom: 30px;
+    width: 6px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #7B2FF2 0%, #5A1BD3 100%);
+}
+.layuimini-main-feedback-list .record-card.waiting::before{
+    background: linear-gradient(180deg, #D2CBE8 0%, #AEA3C8 100%);
+}
+.layuimini-main-feedback-list .record-time{
+    display: block;
+    width: fit-content;
+    max-width: calc(100% - 56px);
+    margin: 0 auto 18px;
+    padding: 10px 18px;
+    border: 1px solid rgba(123,47,242,0.12);
+    border-radius: 999px;
+    background: #F5EFFD;
+    color: #9E95B8;
+    font-size: 13px;
+    line-height: 1;
+}
+.layuimini-main-feedback-list .record-track{
+    position: absolute;
+    left: 62px;
+    top: 34px;
+    bottom: 32px;
+    width: 4px;
+    border-radius: 999px;
+    background: #E9E0FB;
+}
+.layuimini-main-feedback-list .record-card.waiting .record-track{
+    background: #E3DBF2;
+}
+.layuimini-main-feedback-list .record-badge{
+    position: absolute;
+    left: 32px;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+    background: #F3EDFD;
+    color: #7B2FF2;
+    font-size: 18px;
+    box-shadow: 0 12px 24px rgba(123,47,242,0.08);
+}
+.layuimini-main-feedback-list .record-card.waiting .record-badge{
+    color: #948AAE;
+}
+.layuimini-main-feedback-list .record-content{
+    margin-left: 92px;
+}
+.layuimini-main-feedback-list .feedback-label{
+    margin-bottom: 10px;
+    text-align: right;
+    color: #7C7296;
+    font-size: 14px;
+    font-weight: 700;
+}
+.layuimini-main-feedback-list .feedback-row{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 12px;
+}
+.layuimini-main-feedback-list .feedback-bubble{
+    max-width: calc(100% - 72px);
+    padding: 18px 22px;
+    border-radius: 24px 24px 10px 24px;
+    background: linear-gradient(135deg, #8138F5 0%, #5B1FDB 100%);
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.65;
+    word-break: break-word;
+    box-shadow: 0 18px 34px rgba(123,47,242,0.22);
+}
+.layuimini-main-feedback-list .feedback-avatar{
+    flex: 0 0 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: #F4EEFD;
+    color: #7B2FF2;
+    font-size: 24px;
+}
+.layuimini-main-feedback-list .status-line{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 12px;
+}
+.layuimini-main-feedback-list .status-title{
+    color: #7B2FF2;
+    font-size: 15px;
+    font-weight: 700;
+}
+.layuimini-main-feedback-list .record-card.waiting .status-title{
+    color: #7C7296;
+}
+.layuimini-main-feedback-list .status-value{
+    color: #9C95B3;
+    font-size: 14px;
+}
+.layuimini-main-feedback-list .detail-panel{
+    padding: 18px 22px;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 1.9;
+    word-break: break-word;
+}
+.layuimini-main-feedback-list .detail-panel.reply-panel{
+    border: 1px solid rgba(123,47,242,0.12);
+    background: #F7F2FD;
+    color: #5B536F;
+}
+.layuimini-main-feedback-list .detail-panel.pending-panel{
+    border: 1px dashed rgba(146,136,177,0.42);
+    background: rgba(250,247,255,0.9);
+    color: #6B6381;
+}
+.layuimini-main-feedback-list .record-empty{
+    margin-top: 18px;
+    padding: 42px 24px;
+    border: 1px solid rgba(123,47,242,0.12);
+    border-radius: 24px;
+    background: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(123,47,242,0.06);
+}
+.layuimini-main-feedback-list .record-empty .empty-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    background: #F5EFFD;
+    color: #7B2FF2;
+    font-size: 28px;
+}
+.layuimini-main-feedback-list .record-empty .empty-title{
+    color: #5D5475;
+    font-size: 18px;
+    font-weight: 700;
+}
+.layuimini-main-feedback-list .record-empty .empty-desc{
+    margin-top: 8px;
+    color: #9C95B3;
+    font-size: 14px;
+    line-height: 1.8;
+}
+@media screen and (max-width: 420px){
+    .layuimini-main-feedback-list{
+        padding: 0 12px 24px;
+    }
+    .layuimini-main-feedback-list .record-card{
+        padding: 22px 14px 16px 14px;
+        border-radius: 24px;
+    }
+    .layuimini-main-feedback-list .record-track{
+        left: 50px;
+    }
+    .layuimini-main-feedback-list .record-badge{
+        left: 22px;
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        font-size: 16px;
+    }
+    .layuimini-main-feedback-list .record-content{
+        margin-left: 72px;
+    }
+    .layuimini-main-feedback-list .feedback-row{
+        gap: 10px;
+    }
+    .layuimini-main-feedback-list .feedback-bubble{
+        max-width: calc(100% - 58px);
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+    .layuimini-main-feedback-list .feedback-avatar{
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+    .layuimini-main-feedback-list .detail-panel{
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+}
