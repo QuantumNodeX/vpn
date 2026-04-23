@@ -952,7 +952,7 @@
             <a class="brand" href="#top" aria-label="量子VPN homepage">
                 <span class="brand-mark">QN</span>
                 <span class="brand-text">
-                    <strong>量子VPN</strong>
+                    <strong id="brand-name">量子VPN</strong>
                     <span id="brand-subtitle">全球安全网络</span>
                 </span>
             </a>
@@ -1196,7 +1196,7 @@
         <footer class="footer-shell">
             <div class="footer-card fade-in">
                 <div class="footer-copy">
-                    <strong>量子VPN</strong>
+                    <strong id="footer-brand">量子VPN</strong>
                     <span id="footer-description">为全球用户打造，兼顾私密访问、快速响应，以及更轻量直接的连接体验。</span>
                 </div>
                 <a class="button primary" id="footer-download" href="#downloads">立即下载</a>
@@ -1244,6 +1244,7 @@
                 "zh-CN": {
                     pageTitle: "量子VPN | 安全 极速 简单",
                     pageDescription: "量子VPN 提供覆盖 Windows、macOS、Android 与 iOS 网页版的安全、极速、简单访问体验。",
+                    brandName: "量子VPN",
                     brandSubtitle: "全球安全网络",
                     navFeatures: "安全优势",
                     navExperience: "使用体验",
@@ -1324,6 +1325,7 @@
                 en: {
                     pageTitle: "Quantum VPN | Secure. Fast. Simple.",
                     pageDescription: "Quantum VPN delivers private, fast, and simple access across Windows, macOS, Android, and iOS web.",
+                    brandName: "Quantum VPN",
                     brandSubtitle: "Global Secure Network",
                     navFeatures: "Security",
                     navExperience: "Experience",
@@ -1636,6 +1638,7 @@
                     descriptionMeta.setAttribute("content", locale.pageDescription);
                 }
 
+                setText("brand-name", locale.brandName);
                 setText("brand-subtitle", locale.brandSubtitle);
                 setText("nav-features", locale.navFeatures);
                 setText("nav-experience", locale.navExperience);
@@ -1704,6 +1707,7 @@
                 setText("card-ios-pill-1", locale.cardIosPill1);
                 setText("card-ios-pill-2", locale.cardIosPill2);
                 setText("card-ios-download", locale.cardIosDownload);
+                setText("footer-brand", locale.brandName);
                 setText("footer-description", locale.footerDescription);
                 setText("footer-download", locale.footerDownload);
 
