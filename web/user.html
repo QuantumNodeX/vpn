@@ -108,6 +108,10 @@
         </div>
       </div>
     </div>
+
+    <div class="logout-wrap">
+      <button class="logout-button" type="button">退出登录</button>
+    </div>
   </div>
 </div>
 
@@ -319,6 +323,21 @@
 
     $(".layuimini-main-user .feedback").on('click', function () {
       goPage('feedback.html');
+    });
+
+    $(".layuimini-main-user .logout-button").on('click', function () {
+      try {
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
+        localStorage.removeItem('layui-user');
+        localStorage.removeItem('layui-token');
+      } catch (error) {
+      }
+
+      layui.data('user', null);
+      layui.data('token', null);
+
+      window.location = 'login.html';
     });
 
     syncServiceDotsFromCache();
