@@ -2,7 +2,7 @@ layui.use(['form', 'table', 'miniPage'], function () {
     var $ = layui.jquery;
     var layer = layui.layer;
     var miniPage = layui.miniPage;
-    var ts = 1200;
+    var ts = 300000;
     var inter = setInterval(getBroadcastLastId,ts);
     var interfeedback = setInterval(getFeedbackLastId, ts);
 
