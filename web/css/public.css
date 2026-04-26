@@ -201,6 +201,20 @@ button {
     display: none; /* Chrome Safari */
 }
 
+.layui-layer-msg,
+.layui-layer-hui {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.layui-layer-msg .layui-layer-content,
+.layui-layer-hui .layui-layer-content {
+    background: #000 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
 /*::-webkit-input-placeholder {*/
 /*    color: red;*/
 /*}*/

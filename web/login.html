@@ -67,7 +67,7 @@
                         </div>
                         <div class="layui-form-item input">
                             <img src="./images/icon_password_new.svg" class="icon" />
-                            <input type="text" id="login-password" name="password" autocomplete="off" placeholder="请输入您的密码" class="layui-input">
+                            <input type="text" id="login-password" name="password" inputmode="email" autocomplete="off" placeholder="请输入您的密码" class="layui-input">
                         </div>
                     </div>
 
@@ -90,6 +90,7 @@
                 layer = layui.layer,
                 $ = layui.jquery;
 
+            ensureDeviceId();
 
             let request = GetRequestParams(layui.router().href);
             if (request["channel"] != undefined && request["channel"] != ""){

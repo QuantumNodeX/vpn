@@ -66,6 +66,34 @@ function dateStrFormat(str){
     return str
 }
 
+function generateDeviceId() {
+    if (window.crypto && window.crypto.getRandomValues) {
+        let bytes = new Uint8Array(16);
+        window.crypto.getRandomValues(bytes);
+        let result = "";
+        for (let i = 0; i < bytes.length; i++) {
+            result += bytes[i].toString(16).padStart(2, "0");
+        }
+        return result;
+    }
+
+    let result = "";
+    while (result.length < 32) {
+        result += Math.random().toString(16).slice(2);
+    }
+    return result.slice(0, 32);
+}
+
+function ensureDeviceId() {
+    let deviceStore = layui.data('deviceId') || {};
+    let deviceId = deviceStore.id;
+    if (!deviceId) {
+        deviceId = generateDeviceId();
+        layui.data('deviceId', {key: "id", value: deviceId});
+    }
+    return deviceId;
+}
+
 const axios = function(options){
     if(options.method==""){
         options.method = "POST"
@@ -116,7 +144,7 @@ const axios = function(options){
             channel = "web"
         }
 
-        let deviceId = layui.data('deviceId').id;
+        let deviceId = ensureDeviceId();
         xhr.setRequestHeader("deviceId", deviceId);
         xhr.setRequestHeader("channel", channel);
         xhr.setRequestHeader("Platform", "web");
