@@ -429,17 +429,21 @@
 }
 
 .layuimini-main-buy .show {
-    position: absolute;
+    position: fixed;
     inset: 0;
     display: none;
     background: rgba(17, 12, 31, 0.34);
     backdrop-filter: blur(8px);
+    overflow-y: auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    z-index: 999;
 }
 
 .layuimini-main-buy .show .dialog-card {
     position: relative;
-    width: min(320px, calc(100% - 32px));
-    margin: 120px auto 0;
+    width: min(320px, 100%);
+    margin: 80px auto 24px;
     padding: 20px 18px 18px;
     border: 1px solid rgba(123, 47, 242, 0.14);
     border-radius: 26px;
@@ -448,7 +452,7 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 243, 255, 0.98) 100%);
     box-shadow: 0 24px 56px rgba(67, 33, 126, 0.18);
     text-align: center;
-    margin-top: 50%;
+    box-sizing: border-box;
 }
 
 .layuimini-main-buy .show .dialog-icon {
