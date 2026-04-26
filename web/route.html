@@ -171,7 +171,10 @@
               <div class="route-body">
                 <div class="route-meta">
                   <img src="${item.image_url}">
-                  <span class="name">${item.name}</span>
+                  <span class="name" style="font-size: ${item.id == 500 ? '12px' : 'inherit'}">
+                    ${item.name}
+                    ${item.id == 500 ? '<br/>失效历史链接,防止被盗' : ''}
+                  </span>
                 </div>
                 <div class="route-detail" value="${item.id}">${item.id==500 ? '重置线路':'获取密钥'}</div>
               </div>
