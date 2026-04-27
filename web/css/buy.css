@@ -428,22 +428,26 @@
     line-height: 50px;
 }
 
-.layuimini-main-buy .show {
+.layuimini-main-buy .show,
+.pay-status-modal {
     position: fixed;
     inset: 0;
     display: none;
+    align-items: center;
+    justify-content: center;
     background: rgba(17, 12, 31, 0.34);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     overflow-y: auto;
-    padding: 24px 16px;
+    padding: 24px 16px calc(24px + env(safe-area-inset-bottom));
     box-sizing: border-box;
-    z-index: 999;
+    z-index: 3000;
 }
 
-.layuimini-main-buy .show .dialog-card {
+.layuimini-main-buy .show .dialog-card,
+.pay-status-modal .dialog-card {
     position: relative;
     width: min(320px, 100%);
-    margin: 80px auto 24px;
     padding: 20px 18px 18px;
     border: 1px solid rgba(123, 47, 242, 0.14);
     border-radius: 26px;
@@ -455,7 +459,8 @@
     box-sizing: border-box;
 }
 
-.layuimini-main-buy .show .dialog-icon {
+.layuimini-main-buy .show .dialog-icon,
+.pay-status-modal .dialog-icon {
     display: grid;
     place-items: center;
     width: 58px;
@@ -465,12 +470,14 @@
     background: linear-gradient(135deg, rgba(123, 47, 242, 0.16), rgba(151, 71, 255, 0.08));
 }
 
-.layuimini-main-buy .show .dialog-icon img {
+.layuimini-main-buy .show .dialog-icon img,
+.pay-status-modal .dialog-icon img {
     width: 48px;
     height: 48px;
 }
 
-.layuimini-main-buy .show .title {
+.layuimini-main-buy .show .title,
+.pay-status-modal .title {
     margin-top: 14px;
     font-size: 18px;
     line-height: 1.3;
@@ -478,23 +485,25 @@
     color: #181326;
 }
 
-.layuimini-main-buy .show .desc {
+.layuimini-main-buy .show .desc,
+.pay-status-modal .desc {
     margin: 10px 0 0;
-    padding: 0;
     border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 0 0 1px rgba(123, 47, 242, 0.08);
     color: #6f6884;
     font-size: 14px;
     line-height: 1.7;
 }
 
-.layuimini-main-buy .show .desc span {
+.layuimini-main-buy .show .desc span,
+.pay-status-modal .desc span {
     word-break: break-all;
 }
 
-.layuimini-main-buy .show .close {
+.layuimini-main-buy .show .close,
+.pay-status-modal .close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -508,19 +517,22 @@
     cursor: pointer;
 }
 
-.layuimini-main-buy .show .close img {
+.layuimini-main-buy .show .close img,
+.pay-status-modal .close img {
     width: 14px;
     height: 14px;
 }
 
-.layuimini-main-buy .show .bottom {
+.layuimini-main-buy .show .bottom,
+.pay-status-modal .bottom {
     margin-top: 18px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 }
 
-.layuimini-main-buy .show .bottom button {
+.layuimini-main-buy .show .bottom button,
+.pay-status-modal .bottom button {
     height: 42px;
     border: 0;
     border-radius: 16px;
@@ -529,9 +541,16 @@
     font-weight: 800;
 }
 
-.layuimini-main-buy .show .bottom button:first-child {
+.layuimini-main-buy .show .bottom button:first-child,
+.pay-status-modal .bottom button:first-child {
     background: rgba(123, 47, 242, 0.08);
     color: #6d6684;
+}
+
+body.buy-modal-open,
+body.buy-modal-open .layuimini-content-page,
+body.buy-modal-open .mescroll {
+    overflow: hidden;
 }
 
 @media (max-width: 420px) {
