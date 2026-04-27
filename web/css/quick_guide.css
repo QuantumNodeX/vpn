@@ -1,0 +1,185 @@
+::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(123, 47, 242, 0.26);
+    border-radius: 999px;
+}
+
+.layuimini-main-guide {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.layuimini-main-guide .guide-shell {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 26px;
+    background:
+        radial-gradient(circle at top right, rgba(123, 47, 242, 0.2), transparent 34%),
+        linear-gradient(180deg, rgba(28, 30, 40, 0.98), rgba(20, 22, 30, 0.98));
+    border: 1px solid rgba(123, 47, 242, 0.22);
+    box-shadow: 0 20px 60px rgba(13, 15, 22, 0.3);
+    overflow: hidden;
+}
+
+.layuimini-main-guide .guide-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.layuimini-main-guide .guide-shell > * {
+    position: relative;
+    z-index: 1;
+}
+
+.layuimini-main-guide .guide-hero {
+    padding: 18px 16px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(123, 47, 242, 0.22), rgba(123, 47, 242, 0.08));
+    border: 1px solid rgba(123, 47, 242, 0.24);
+}
+
+.layuimini-main-guide .guide-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #d6c2ff;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.layuimini-main-guide .guide-title {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.layuimini-main-guide .guide-desc {
+    margin-top: 8px;
+    color: #c8c2d8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.layuimini-main-guide .guide-notice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 11px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #eae6f4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.layuimini-main-guide .guide-notice-dot {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8d5cff;
+    box-shadow: 0 0 0 6px rgba(141, 92, 255, 0.12);
+}
+
+.layuimini-main-guide .guide-steps {
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.layuimini-main-guide .guide-step {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(39, 43, 58, 0.92), rgba(28, 30, 40, 0.98));
+    border: 1px solid rgba(123, 47, 242, 0.16);
+}
+
+.layuimini-main-guide .guide-step:first-child {
+    margin-top: 0;
+}
+
+.layuimini-main-guide .guide-step-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.layuimini-main-guide .guide-step-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9b68ff, #632df0);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(99, 45, 240, 0.28);
+}
+
+.layuimini-main-guide .guide-step-title {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.layuimini-main-guide .guide-step-text {
+    margin-top: 4px;
+    color: #b9b2ca;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.layuimini-main-guide .guide-step img {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.layuimini-main-guide .guide-footer {
+    margin-top: 16px;
+    padding: 15px 16px 16px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(123, 47, 242, 0.12));
+    border: 1px solid rgba(123, 47, 242, 0.14);
+}
+
+.layuimini-main-guide .guide-footer-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.layuimini-main-guide .guide-footer-text {
+    margin-top: 6px;
+    color: #cfc8df;
+    font-size: 13px;
+    line-height: 1.6;
+}
